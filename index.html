@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Filament Field Guide</title>
+<meta name="description" content="3D printing filament guide: print temperatures for PLA, PETG, TPU, ABS, ASA and nylon, troubleshooting, and a daily print log.">
+<!-- ADSENSE:HEAD -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="wrap">
+  <span class="eyebrow">FDM materials · reference</span>
+  <h1>Filament Field Guide</h1>
+  <p class="lede">Which plastic to load, what temperatures to start from, and how to fix the prints that go wrong. Written for hobbyists and small print shops selling on Etsy.</p>
+  <a class="jump" href="#blog">Read the daily print log ↓</a>
+</div></header>
+
+<section><div class="wrap">
+  <h2>Material comparison</h2>
+  <p>Temperatures are typical starting ranges. Always check the label on your spool, since brands tune their blends differently.</p>
+  <div class="table-scroll"><table>
+    <thead><tr><th>Material</th><th>Nozzle °C</th><th>Bed °C</th><th>Enclosure</th><th>Difficulty</th><th>Best for</th></tr></thead>
+    <tbody>
+      <tr><td class="mat">PLA</td><td class="num">190–220</td><td class="num">50–60</td><td>No</td><td><span class="diff" aria-label="1 of 5"><i class="on"></i><i></i><i></i><i></i><i></i></span></td><td>Decor, prototypes, gifts, most Etsy items</td></tr>
+      <tr><td class="mat">PETG</td><td class="num">220–250</td><td class="num">70–85</td><td>No</td><td><span class="diff" aria-label="2 of 5"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></td><td>Functional parts, planters, outdoor-lite use</td></tr>
+      <tr><td class="mat">TPU</td><td class="num">210–235</td><td class="num">40–60</td><td>No</td><td><span class="diff" aria-label="3 of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></td><td>Phone cases, gaskets, bumpers, flexible parts</td></tr>
+      <tr><td class="mat">ABS</td><td class="num">230–260</td><td class="num">95–110</td><td>Yes</td><td><span class="diff" aria-label="4 of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></td><td>Heat-resistant parts, automotive interiors</td></tr>
+      <tr><td class="mat">ASA</td><td class="num">235–260</td><td class="num">90–110</td><td>Yes</td><td><span class="diff" aria-label="4 of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></td><td>Outdoor parts that need UV resistance</td></tr>
+      <tr><td class="mat">Nylon / PA</td><td class="num">250–280</td><td class="num">70–100</td><td>Recommended</td><td><span class="diff" aria-label="5 of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></td><td>Gears, hinges, high-wear mechanical parts</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Choosing your first spools</h2>
+  <div class="grid">
+    <div class="cell"><h3>Start with matte PLA</h3><p>Matte finishes hide layer lines, which makes photos look better in shop listings. PLA prints on almost any machine without tuning.</p></div>
+    <div class="cell"><h3>Add PETG for anything functional</h3><p>Hooks, clips and brackets that take load or sit in a warm car hold up far better in PETG than in PLA.</p></div>
+    <div class="cell"><h3>Keep filament dry</h3><p>PETG, TPU and nylon absorb moisture from the air. Store spools sealed with desiccant, and dry them if prints start popping or stringing.</p></div>
+    <div class="cell"><h3>Buy fewer colors in bulk</h3><p>A small set of core colors bought in multi-spool packs lowers cost per gram, which matters once you price items for resale.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Troubleshooting</h2>
+  <div>
+    <div class="fix"><b>Print won't stick to the bed</b><p>Clean the plate with isopropyl alcohol, re-level or re-run auto bed leveling, and lower the first-layer Z offset slightly. Slow the first layer down.</p></div>
+    <div class="fix"><b>Stringing between parts</b><p>Dry the filament first. Then drop nozzle temperature by 5 °C at a time and increase retraction distance in small steps.</p></div>
+    <div class="fix"><b>Corners lifting (warping)</b><p>Use a brim, raise bed temperature, and block drafts. For ABS and ASA, an enclosure is the real fix.</p></div>
+    <div class="fix"><b>Weak, brittle parts</b><p>Usually under-extrusion or wet filament. Check flow rate, raise temperature slightly, and add walls before adding infill.</p></div>
+    <div class="fix"><b>Rough or bubbly surface</b><p>Moisture again. Dry the spool at the manufacturer's recommended temperature for several hours.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Filament we use</h2>
+  <div class="partner">
+    <h3>Polymaker</h3>
+    <p>Polymaker makes PLA, PETG, ABS, ASA, TPU, nylon and specialty blends in dozens of colors. Their Panchroma line covers the matte and sparkle finishes that photograph well for listings.</p>
+    <div class="code">
+      <output id="code">VINCENTGALLARDO</output>
+      <button type="button" id="copy">Copy code</button>
+      <a class="btn" href="https://shop.polymaker.com/" target="_blank" rel="sponsored noopener">Shop Polymaker</a>
+    </div>
+    <p style="color:var(--muted);font-size:14px">Enter the code at checkout. Using it supports this guide at no extra cost to you.</p>
+  </div>
+</div></section>
+
+<section id="blog"><div class="wrap">
+  <h2>Print Log</h2>
+  <p>A new post every day on materials, settings, and fixes for real print problems.</p>
+  <div class="post-list">
+<!-- POSTS:START -->
+<article class="post-item"><time datetime="2026-10-26">Oct 26, 2026</time><h3><a href="blog/2026-10-26-wet-filament.html">Is your filament wet? How to tell and how to fix it</a></h3><p>Popping, stringing and brittle PLA usually mean moisture. Here is how to spot it, dry it, and keep it from coming back.</p></article>
+<!-- POSTS:END -->
+  </div>
+  <a class="jump" href="blog/">All posts →</a>
+</div></section>
+
+<footer><div class="wrap site-foot"><p>Affiliate disclosure: some links on this page are affiliate links. If you buy through them, this site may earn a commission at no added cost to you. Recommendations are based on material properties, not on commission.</p><nav><a href="">Home</a><a href="blog/">Print Log</a><a href="privacy.html">Privacy policy</a></nav></div></footer>
+
+<script>
+document.getElementById('copy').addEventListener('click',function(){
+  var b=this,t=document.getElementById('code').textContent;
+  function done(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy code'},1600)}
+  function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('code'));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Press Ctrl+C'}
+  try{navigator.clipboard.writeText(t).then(done,sel)}catch(e){sel()}
+});
+</script>
+</body>
+</html>
