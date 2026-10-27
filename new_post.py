@@ -16,6 +16,9 @@ BASE = CFG['base_url'].rstrip('/') + '/'
 def head(root, title, desc):
     h = open(os.path.join(ROOT,'_head.html')).read().replace('{root}', root)
     h = re.sub(r'<title>.*?</title>', f'<title>{html.escape(title)}</title>', h)
+    h = re.sub(r'<meta property="og:url" content="[^"]*">\n?', '', h)
+    h = re.sub(r'<meta property="og:title" content="[^"]*">', f'<meta property="og:title" content="{html.escape(title)}">', h)
+    h = re.sub(r'<meta property="og:description" content="[^"]*">', f'<meta property="og:description" content="{html.escape(desc)}">', h)
     return re.sub(r'<meta name="description" content="[^"]*">', f'<meta name="description" content="{html.escape(desc)}">', h)
 
 def item(date, href, title, excerpt):
