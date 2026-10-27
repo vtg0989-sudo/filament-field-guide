@@ -80,3 +80,7 @@ footer{padding-block:32px;color:var(--muted);font-size:13px}
 .site-foot{display:grid;gap:10px}
 .site-foot nav{display:flex;flex-wrap:wrap;gap:16px}
 .site-foot a{color:var(--muted)}
+
+.gear .g-tag{font:500 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--hot)}
+.gear h3{margin:0}
+.gear a{font-weight:600;font-size:15px;color:var(--accent)}
